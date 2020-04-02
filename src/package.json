@@ -4,7 +4,8 @@
   "description": "A repository contains a example of a bundle template with Gulp",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch gulpfile.js --exec gulp"
+    "dev": "nodemon --watch gulpfile.js --exec gulp",
+    "reInstall": "rm -rf node_modules & amp; rm -rf package-lock.json & amp; npm install"
   },
   "repository": {
     "type": "git",
