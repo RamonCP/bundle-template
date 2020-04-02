@@ -4,6 +4,7 @@ const rename = require('gulp-rename')
 const stylus = require('gulp-stylus')
 const concat = require('gulp-concat')
 const browserSync = require('browser-sync').create();
+const sourcemaps = require('gulp-sourcemaps')
 
 const paths = {
     styles: {
@@ -36,15 +37,18 @@ function styles(){
 
 function scripts() {
     return gulp.src(paths.scripts.src, { sourcemaps: true })
-      .pipe(uglify())
-      .pipe(concat('main.min.js'))
-      .pipe(gulp.dest(paths.scripts.dest))
-      .pipe(browserSync.stream());
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(concat('main.min.js'))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(paths.scripts.dest))
+        .pipe(browserSync.stream());
 }
 
 function watch() {
     browserSync.init({
-        server: "./"
+        server: "./",
+        open: false
     });
 
     gulp.watch(paths.scripts.src, scripts);

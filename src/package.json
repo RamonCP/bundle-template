@@ -4,7 +4,7 @@
   "description": "A repository contains a example of a bundle template with Gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch gulpfile.js --exec gulp"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,9 @@
     "url": "https://github.com/RamonCP/bundle-template/issues"
   },
   "homepage": "https://github.com/RamonCP/bundle-template#readme",
-  "dependencies": {},
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
