@@ -4,7 +4,7 @@
   "description": "A repository contains a example of a bundle template with Gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch ./gulpfile.js --exec gulp"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
-    "gulp-uglify-es": "^2.0.0"
+    "gulp-uglify-es": "^2.0.0",
+    "nodemon": "^2.0.2"
   }
 }

@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/title.styl"],"names":[],"mappings":"AAAA;EACI,OAAM,KAAN;EACA,aAAY,KAAZ;EACA,WAAU,KAAV;EACA,eAAc,KAAd;EACA,aAAiB,6BAAjB","file":"title.css","sourcesContent":["h1 \r\n    color #000\r\n    font-weight bold\r\n    font-size 35px\r\n    margin-bottom 30px\r\n    font-family Arial, Helvetica, sans-serif"]}
